@@ -1,0 +1,8 @@
+<?php
+
+define('MAPBOX_ACCESS_TOKEN', '');
+define('MAPBOX_PROJECT_KEY', '');
+
+define('PHARMOUTCOMES_KEY', '');
+
+define('LIMIT SERVICES', '123');

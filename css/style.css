@@ -1,0 +1,33 @@
+body {
+  font-family: 'Open Sans', arial, sans-serif;
+}
+
+h1 { color: #64AF58; }
+
+#page-container { width: 500px; margin: auto; padding: 20px; }
+.input-text {
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+
+  font-size: 18px;
+  font-family: 'Open Sans', arial, sans-serif;
+}
+.input-text:focus {
+  border-color: #64AF58;
+}
+
+#mapid { height: 400px; width: 500px; margin-top: 10px; }
+#postcode-error {
+  height: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background: #7D171E;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
