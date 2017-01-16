@@ -63,6 +63,8 @@ require_once('config.php');
     $("#postcode-error").css('height', '23px');
   }
 
+  markers = [];
+
   //user is "finished typing," do something
   function doneTyping () {
     postcode = $("#postcode").val();
@@ -88,14 +90,23 @@ require_once('config.php');
       $.ajax({
         url: "servlet.php",
         data: {
-          postcode: "PO301BH"
+          postcode: postcode
         }
       })
       .done(function( data ) {
         $("#postcode").css('background', '#96D28D');
+        for(i = 0; i < markers.length; i++)
+        {
+          mymap.removeLayer(markers[i]);
+        }
+        markers = [];
         $.each(data, function(index, value) {
           var markerLocation = new L.LatLng(value.latitude, value.longitude);
-          L.marker([value.latitude, value.longitude]).addTo(mymap);
+          marker = L.marker([value.latitude, value.longitude]).addTo(mymap);
+          marker.bindPopup("<b>"+value.display_name+"</b><br>"+value.address+"<br>Telephone: "+value.telephone);
+          if(index == 0)
+            marker.openPopup();
+          markers.push(marker);
         });
       });
     }
