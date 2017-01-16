@@ -29,7 +29,7 @@ $query = http_build_query([
 // Set some options - we are passing in a useragent too here
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'http://api.pharmoutcomes.org/v1/providers/range?'.$query,
+    CURLOPT_URL => 'https://api.pharmoutcomes.org/v1/providers/range?'.$query,
     CURLOPT_HTTPHEADER => $arrHeaders
 ));
 // Send the request & save response to $resp
