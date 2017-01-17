@@ -24,7 +24,7 @@ require_once('config.php');
   </div>
 
   <script type="text/javascript">
-  var mymap = L.map('mapid').setView([50.69908305, -1.29838969], 13);
+  var mymap = L.map('mapid').setView([<?=START_LATITUDE?>, <?=START_LONGITUDE?>], 10);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=<?=MAPBOX_ACCESS_TOKEN?>', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',

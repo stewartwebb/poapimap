@@ -1,8 +1,14 @@
 <?php
-
+// Map box API Keys https://www.mapbox.com/
 define('MAPBOX_ACCESS_TOKEN', '');
 define('MAPBOX_PROJECT_KEY', '');
 
+// PharmOutcomes API Key https://api.pharmoutcomes.org
 define('PHARMOUTCOMES_KEY', '');
 
+// Starting position of the map on pageload
+define('START_LATITUDE', '50.69908305');
+define('START_LONGITUDE', '-1.29838969');
+
+// Not used currently
 define('LIMIT SERVICES', '123');
